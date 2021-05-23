@@ -101,7 +101,7 @@ public class Register_Food extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                txtmsg.setText("오늘의 정보 등록 완료!");
+                txtmsg.setText("오늘의 밥 정보 등록 완료!");
             }
         });
 
