@@ -1,28 +1,19 @@
-package org.techtown.abcdefg;
+package com.example.login_animal;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class Main extends AppCompatActivity implements View.OnClickListener {
     ImageButton btnFood, btnSnack, btnWalk, btnHealth;
-    private DrawerLayout drawerLayout;
-    private View drawerView;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.main);
 
         btnFood = findViewById(R.id.imgBtn1);
         btnFood.setOnClickListener(this);
@@ -38,10 +29,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.imgBtn1:
-                Intent intent1 = new Intent(MainActivity.this, Register_Food.class);
+                Intent intent1 = new Intent(Main.this, Register_Food.class);
                 startActivity(intent1);
                 break;
-            /*case R.id.imgBtn2:
+            case R.id.imgBtn2:
                 Intent intent2 = new Intent(Main.this, Register_Snack.class);
                 startActivity(intent2);
                 break;
@@ -52,11 +43,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.imgBtn4:
                 Intent intent4 = new Intent(Main.this, Register_Health.class);
                 startActivity(intent4);
-                break;*/
+                break;
             default: break;
-
         }
 
     }
-
 }
